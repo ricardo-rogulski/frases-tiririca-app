@@ -1,0 +1,52 @@
+import React from 'react';
+import { Text, AppRegistry, View } from 'react-native';
+
+const Estilos = {
+
+  estiloTexto: {
+    fontSize: 20,
+    backgroundColor: '#08509B',
+    color: '#EEE',
+    padding: 15,
+    fontWeight: '100',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    height: 60,
+    width: 60
+  },
+  estiloTexto2: {
+    fontSize: 20,
+    backgroundColor: '#666666',
+    color: '#EEE',
+    padding: 15,
+    fontWeight: '100',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    height: 60,
+    width: 60
+
+  },
+  estiloView: {
+    backgroundColor: '#DEDEDE',
+    height: 300,
+    justifyContent: 'space-between', //space-around, space-between
+    alignItems: 'center', //stretch -> preenche todo o conteudo
+    flexDirection: 'row' //column
+  }
+
+};
+
+const App = () => {
+
+  const { estiloTexto, estiloTexto2, estiloView } = Estilos;
+
+  return (
+    <View style={estiloView}>
+      <Text style={estiloTexto}>A</Text>
+      <Text style={estiloTexto2}>B</Text>
+    </View>
+  );
+};
+
+
+AppRegistry.registerComponent('app2', () => App);

@@ -1,0 +1,30 @@
+import React from 'react';
+import { AppRegistry, View, Image, Text } from 'react-native';
+
+const Estilos = {
+
+  principal: {
+    paddingTop: 40
+  }
+
+};
+
+
+const App = () => {
+
+  const { principal } = Estilos;
+
+  return (
+    <View style={principal}>
+
+      <Image source={require('./imgs/uvas.png')} />
+      <Image
+          style={{width: 200, height: 200}}
+          source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+        />
+    </View>
+  );
+};
+
+
+AppRegistry.registerComponent('app2', () => App);
